@@ -1,20 +1,14 @@
 pipeline {
-    agent any
-    stages {
-        stage('Check out') {
-            steps{
-                echo "This is test to pipeline project"
+    agent {
+        label 'slave2'
+        stages {
+            stage1 {
+                steps {
+                    echo "Done at worker1"
+                }
             }
         }
-        stage('build') {
-            steps{
-                echo "This is test to pipeline project"
-            }
-        }
-        stage('3rd one') {
-            steps{
-                echo "This is test to pipeline project"
-            }
+    }
         }
     }
 }

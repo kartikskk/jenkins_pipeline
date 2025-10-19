@@ -4,6 +4,15 @@ pipeline {
     stages {
         stage('Stage 1') {
             steps {
+                echo "Done at worker2"
+            }
+        }
+    }
+    agent { label 'slave1' }
+
+    stages {
+        stage('Stage 1') {
+            steps {
                 echo "Done at worker1"
             }
         }

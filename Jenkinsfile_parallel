@@ -53,7 +53,7 @@ pipeline {
                     }
                 }
 
-                stage('TEST2') {
+                stage('TEST6') {
                     steps {
                         echo "This is TEST2 Firefox test stage"
                         sleep 5
